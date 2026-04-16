@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Remove-Item -Path \"C:\\\\Users\\\\lucas\\\\mis-321-pa3-chckacrip\\\\backend\\\\publish\" -Recurse -Force)",
+      "Bash(Remove-Item -Path \"C:\\\\Users\\\\lucas\\\\mis-321-pa3-chckacrip\\\\backend\\\\app.zip\" -Force)",
+      "Bash(Remove-Item -Path \"C:\\\\Users\\\\lucas\\\\mis-321-pa3-chckacrip\\\\backend\\\\app-v2.zip\" -Force)",
+      "Bash(Remove-Item -Path \"C:\\\\Users\\\\lucas\\\\mis-321-pa3-chckacrip\\\\backend\\\\app-v3.tar.gz\" -Force)",
+      "Bash(Remove-Item -Path \"C:\\\\Users\\\\lucas\\\\mis-321-pa3-chckacrip\\\\backend\\\\app-v4.zip\" -Force)",
+      "Bash(dir \"C:\\\\Users\\\\lucas\\\\mis-321-pa3-chckacrip\\\\backend\")"
+    ]
+  }
+}
