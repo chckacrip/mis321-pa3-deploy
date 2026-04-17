@@ -32,7 +32,7 @@ var app = builder.Build();
 // Embed schema chunks at startup
 await EmbedSchemaAtStartup(schemaChunks, embeddingClient, connectionString);
 
-// Serve frontend folder (not wwwroot)
+// Serve frontend folder
 var frontendPath = Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, "..", "frontend"));
 Console.WriteLine($"[Startup] Serving frontend from: {frontendPath}");
 
