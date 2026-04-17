@@ -33,7 +33,8 @@ var app = builder.Build();
 await EmbedSchemaAtStartup(schemaChunks, embeddingClient, connectionString);
 
 // Serve frontend folder
-var frontendPath = Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, "..", "frontend"));
+var frontendPath = Environment.GetEnvironmentVariable("FRONTEND_PATH")
+    ?? Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, "..", "frontend"));
 Console.WriteLine($"[Startup] Serving frontend from: {frontendPath}");
 
 app.UseDefaultFiles(new DefaultFilesOptions
