@@ -61,6 +61,13 @@ container.appendChild(loadingEl);
 container.appendChild(inputRow);
 app.appendChild(container);
 
+// Intro welcome message
+appendMessage('assistant',
+  'Welcome! This app lets you query the TQL_2012 business database using plain English. ' +
+  'It uses RAG to retrieve relevant schema context and GPT-4o with function calling to generate and execute SQL. ' +
+  'Try asking something like: "Who are the top 5 customers by total sales?" or "How many orders were placed in 2011?"'
+);
+
 // Append a chat bubble
 function appendMessage(role, text, sql) {
   const bubble = document.createElement('div');
