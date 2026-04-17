@@ -1,2 +1,1 @@
-[phases.setup]
-nixPkgs = ["dotnet-sdk_9"]
+providers = ["csharp"]
