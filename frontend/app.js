@@ -14,7 +14,7 @@ headerIcon.textContent = '🗄️';
 const headerText = document.createElement('div');
 headerText.className = 'header-text';
 const h1 = document.createElement('h1');
-h1.textContent = 'DB Assistant';
+h1.textContent = 'TQL_2012 Database Assistant';
 const subtitle = document.createElement('p');
 subtitle.textContent = 'Ask questions about the TQL_2012 database in plain English';
 headerText.appendChild(h1);
