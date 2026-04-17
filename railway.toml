@@ -1,0 +1,6 @@
+[build]
+builder = "nixpacks"
+buildCommand = "cd backend && dotnet publish -c Release -o ./out"
+
+[deploy]
+startCommand = "cd backend && ./out/mis-321-pa3-chckacrip"

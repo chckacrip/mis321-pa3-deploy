@@ -32,16 +32,8 @@ var app = builder.Build();
 // Embed schema chunks at startup
 await EmbedSchemaAtStartup(schemaChunks, embeddingClient, connectionString);
 
-// Serve frontend folder — try multiple paths for local vs Railway
-var frontendCandidates = new[]
-{
-    Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, "frontend")),
-    Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, "..", "frontend")),
-    Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "frontend")),
-    Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "frontend")),
-};
-var frontendPath = frontendCandidates.FirstOrDefault(Directory.Exists)
-    ?? frontendCandidates[0];
+// Serve frontend folder (not wwwroot)
+var frontendPath = Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, "..", "frontend"));
 Console.WriteLine($"[Startup] Serving frontend from: {frontendPath}");
 
 app.UseDefaultFiles(new DefaultFilesOptions
