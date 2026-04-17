@@ -12,4 +12,11 @@
     <PackageReference Include="OpenAI" Version="2.10.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="..\frontend\**">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <TargetPath>frontend\%(RecursiveDir)%(Filename)%(Extension)</TargetPath>
+    </Content>
+  </ItemGroup>
+
 </Project>
